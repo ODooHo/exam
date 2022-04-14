@@ -2,7 +2,7 @@
 #include <wiringPi.h>
 #include <unistd.h>
 using namespace std;
-#define PWM_LEDR 18
+#define PWM_LEDR 18 
 #define PWM_LEDG 13
 bool running = true;
 int main()
