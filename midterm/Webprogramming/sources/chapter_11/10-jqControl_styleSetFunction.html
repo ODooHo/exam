@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Basic</title>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 문서 객체를 추가합니다.
+            var output = '';
+            for (var i = 0; i < 5; i++) {
+                output += '<div></div>';
+            }
+            document.body.innerHTML = "<h1>output1<h1>";
+            document.body.innerHTML = output;
+            // document.body.innerHTML = "<h1>output2<h1>";
+            
+            // 스타일을 적용합니다.
+            $('div').css({
+                height: 20,
+                backgroundColor: function (i) {
+                    alert(i); //배열임을 확인
+                    return 'rgb(' + i + ',' + i + ',' + i + ')';
+                }
+            });
+            // document.body.innerHTML = "<h1>output3<h1>";
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

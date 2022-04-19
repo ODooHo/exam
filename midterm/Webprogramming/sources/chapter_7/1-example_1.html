@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Float With Overflow</title>
+  <!-- 수평정렬
+    자손에게 float 속성을 지정하고, 부모의 overflow 속성에는 hidden 키워드 적용 -->
+  <style>
+    div.container {
+      overflow: hidden;
+    }
+
+    div.item {
+      float: left;
+
+      margin: 0 3px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">메뉴 - 1</div>
+    <div class="item">메뉴 - 2</div>
+    <div class="item">메뉴 - 3</div>
+    <div class="item">메뉴 - 4</div>
+  </div>
+</body>
+
+</html>

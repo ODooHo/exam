@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Animate Basic</title>
+    <script>
+        function checkNumeric(elem, msg) {
+            // alert( "We will, we will".replace(/we/i, "I") ); // I will, we will
+            // var exp = /AAA(?!X)/g;
+            // var exp = /\w+(?=X)/g;
+            var exp = /\A.../;
+            var t = elem.innerText.match(exp);
+            alert(t);
+            if (t) {
+                alert('matching');
+                return true;
+            } else {
+                alert(msg);
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <input type='button' 
+        onclick="checkNumeric(document.getElementById('ptn'), 'non-matching')"
+        value='확인' />
+    </form>
+    <p id='ptext'>
+        RegExr was created by 1231241 gskinner.com, and is proudly hosted by Media Temple.
+        Edit the Expression & Text to see matches. Roll over matches or the expression for details. PCRE & JavaScript flavors of RegEx are supported. Validate your expression with Tests mode.
+        The side bar includes a Cheatsheet, full Reference, and Help. You can also Save & Share with the Community, and view patterns you create or favorite in My Patterns.
+        Explore results with the Tools below. Replace & List output custom results. Details lists capture groups. Explain describes your expression in plain English.
+    </p>
+    <p id='ex'>
+        Hello, world! 
+        <br> Hello, world!
+    </p>
+    <p id='wb'>
+        Ere iron was found or tree was hewn, When young was mountain under moon; Ere ring was made, or wrought was woe, It walked the forests long ago.
+    </p>
+    <p id='ptn'>
+        <!-- AAAX---aaax---111 -->
+        AAAXX---AAAY---AAA
+    </p>
+    <form>
+
+</body>

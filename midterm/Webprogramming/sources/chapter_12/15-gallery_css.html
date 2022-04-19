@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        div.item:nth-child(1) {
+            background: blueviolet;
+        }
+
+        div.item:nth-child(2) {
+            background: pink;
+        }
+
+        div.item:nth-child(3) {
+            background: burlywood;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        // 첫 번째 ready 이벤트
+        $(document).ready(function () {
+            // 변수를 선언합니다.
+            var width = $('[data-role="slider"]').attr('data-width');
+            var height = $('[data-role="slider"]').attr('data-height');
+            var count = $('[data-role="slider"] div.item').length;
+            // alert(width);
+            // alert(height);
+            // alert(count);
+
+            // 스타일을 적용합니다.
+            $('[data-role="slider"]').css({
+                    // position default static
+                    position: 'relative',
+                    overflow: 'hidden',
+                    width: width,
+                    height: height
+                })
+                .find('.container').css({
+                    position: 'absolute',
+                    width: count * width,
+                    // height: count * height,
+                    overflow: 'hidden'
+                })
+                .find('.item').css({
+                    width: width,
+                    height: height,
+                    float: 'left'
+                });
+        });
+        // 두 번째 ready 이벤트
+        $(document).ready(function () {
+
+        });
+    </script>
+</head>
+
+<body>
+    <div data-role="slider" data-width="500" data-height="300">
+        <div class="container">
+            <div class="item">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum
+                    pretium elit, at iaculis dui congue facilisis. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Sed augue lectus, sagittis quis commodo
+                    commodo, congue a nibh. Donec ornare leo in ipsum consectetur euismod. Sed
+                    lorem urna, adipiscing eget pharetra ullamcorper, facilisis id sapien.
+                    Phasellus ac pellentesque odio. Curabitur quis tortor vel odio dignissim
+                    congue ac sit amet nisl. Nulla placerat nibh quis mi tincidunt pretium.</p>
+            </div>
+            <div class="item">
+                <h1>adipiscing eget pharetra ullamcorper</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum
+                    pretium elit, at iaculis dui congue facilisis. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Sed augue lectus, sagittis quis commodo
+                    commodo, congue a nibh. Donec ornare leo in ipsum consectetur euismod. Sed
+                    lorem urna, adipiscing eget pharetra ullamcorper, facilisis id sapien.
+                    Phasellus ac pellentesque odio. Curabitur quis tortor vel odio dignissim
+                    congue ac sit amet nisl. Nulla placerat nibh quis mi tincidunt pretium.</p>
+            </div>
+            <div class="item">
+                <h1>Curabitur quis tortor vel odio dignissim</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum
+                    pretium elit, at iaculis dui congue facilisis. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Sed augue lectus, sagittis quis commodo
+                    commodo, congue a nibh. Donec ornare leo in ipsum consectetur euismod. Sed
+                    lorem urna, adipiscing eget pharetra ullamcorper, facilisis id sapien.
+                    Phasellus ac pellentesque odio. Curabitur quis tortor vel odio dignissim
+                    congue ac sit amet nisl. Nulla placerat nibh quis mi tincidunt pretium.</p>
+            </div>
+        </div>
+    </div>
+    <button id="left-button">←</button>
+    <button id="right-button">→</button>
+</body>
+
+</html>

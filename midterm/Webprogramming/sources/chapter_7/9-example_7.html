@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ellipsis</title>
+  <style>
+    h1, p {
+      width: 300px;
+    }
+
+    .ellipsis {
+      /* white-space: normal; */
+      white-space: nowrap;
+      /* white-space: pre; */
+      /* white-space: pre-wrap; */
+      /* white-space: pre-line; */
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="ellipsis">
+    Lo         re
+    m ipsum dolor sit amet, consec adipiscing elit.
+  </h1>
+  <p class="ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </p>
+</body>
+
+</html>
