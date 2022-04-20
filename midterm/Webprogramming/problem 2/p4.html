@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>표 응용</title>
+<style>
+/* 여기부터 답안 코드 작성 */
+	table{
+		border:white;
+		font-size:small;
+		height:15px;
+		text-align :center;
+		line-height: 15px;
+	}
+	table > thead{
+		width :100px;
+		background :darkgray;
+		color:yellow;
+	}
+	table> thead>tr>th{
+		width:100px;
+	}
+	table > tfoot{
+		background :darkgray;
+		color:yellow;
+	}
+	table>tbody>tr>td{
+		color:black;
+		background-color:aqua;
+	}
+	table> tbody>tr>td:hover{
+		background : pink;
+		cursor:pointer
+	}
+
+
+
+
+
+
+
+/* 여기까지 답안 코드 작성 */
+</style>
+</head>
+<body>
+<h3>2022년 1학기 성적</h3>
+<hr>
+<table>
+	<thead>
+		<tr><th>이름</th><th>웹프로그래밍</th><th>IoT플랫폼</th></tr>
+	</thead>
+	<tfoot>
+		<tr><th>합</th><th>330</th><th>305</th></tr>
+	</tfoot>	
+	<tbody>
+		<tr><td>이순신</td><td>80</td><td>70</td></tr>
+		<tr><td>홍길동</td><td>85</td><td>60</td></tr>	
+		<tr><td>강감찬</td><td>75</td><td>80</td></tr>
+		<tr><td>전창완</td><td>90</td><td>95</td></tr>
+	</tbody>
+</table> 
+</body></html>
