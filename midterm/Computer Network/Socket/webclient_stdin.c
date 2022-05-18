@@ -15,8 +15,12 @@ int main(int argc, char *argv[]){
     char *srvIp = NULL;
     unsigned short srvPort;
     char buffer[BUFFER_SIZE];
+    char temp_1[BUFFER_SIZE];
+    char temp_2[BUFFER_SIZE];
+    char temp_3[BUFFER_SIZE];
     int sentSize, rcvSize;
     int ret;
+    int len1,len2;
 
     if (argc != 3){
         printf("Usage: %s IP_addr Port\n",argv[0]);
@@ -45,28 +49,16 @@ int main(int argc, char *argv[]){
         exit(0);
     }
     printf("Client is running.\n");
-    printf("Enter the word to translate into capitals\n");
+    fgets(temp_1, BUFFER_SIZE, stdin);
 
-    while(1){
-        fgets(buffer, BUFFER_SIZE, stdin);
-        buffer[strlen(buffer)-1] = '\0';
-        sentSize = write(cSock,buffer, strlen(buffer)+1);
-        if(sentSize != strlen(buffer)+1){
-            printf("write() sent a different number of bytes than expected\n");
-            exit(0);
-        }
-
-        if(!strcmp(buffer,"quit")) break;
-
-        rcvSize = read(cSock,buffer,BUFFER_SIZE);
+    sentSize = send(cSock,buffer, strlen(buffer),0);
+        rcvSize = recv(cSock,buffer,BUFFER_SIZE,0);
         if(rcvSize <0){
             printf("Error in read()\n");
             exit(0);
         }
 
         printf("%s",buffer);
-    }
 
     close(cSock);
-    printf("TCP Client is Closed.\n");
 }

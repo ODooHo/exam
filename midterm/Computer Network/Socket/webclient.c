@@ -18,12 +18,7 @@ int main(int argc, char *argv[]){
     int sentSize, rcvSize;
     int ret;
 
-    if (argc != 3){
-        printf("Usage: %s IP_addr Port\n",argv[0]);
-        exit(0);
-    }
     srvIp = argv[1]; //서버 IP를 병령 실행줄에서 입력 받음
-    srvPort = atoi(argv[2]); //서버 포트를 명령 실행줄에서 입력 받음
 
     //TCP 클라이언트 용 소켓 생성
     cSock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -36,7 +31,7 @@ int main(int argc, char *argv[]){
     memset(&srvAddr, 0, sizeof(srvAddr));   //주소를 0으로 초기화
     srvAddr.sin_family = AF_INET;            //IPV4 
     srvAddr.sin_addr.s_addr = inet_addr(srvIp); //서버 IP 지정
-    srvAddr.sin_port = htons(srvPort);          //서버 포트 번호 지정
+    srvAddr.sin_port = htons(80);          //서버 포트 번호 지정
 
     //서버에 TCP 연결 수행
     ret = connect(cSock,(struct sockaddr *)&srvAddr, sizeof(srvAddr));
@@ -45,19 +40,7 @@ int main(int argc, char *argv[]){
         exit(0);
     }
     printf("Client is running.\n");
-    printf("Enter the word to translate into capitals\n");
-
-    while(1){
-        fgets(buffer, BUFFER_SIZE, stdin);
-        buffer[strlen(buffer)-1] = '\0';
-        sentSize = write(cSock,buffer, strlen(buffer)+1);
-        if(sentSize != strlen(buffer)+1){
-            printf("write() sent a different number of bytes than expected\n");
-            exit(0);
-        }
-
-        if(!strcmp(buffer,"quit")) break;
-
+        sentSize = write(cSock,"GET / HTTP/1.1\r\nHost: me.go.kr\r\n\r\n", strlen("GET / HTTP/1.1\r\nHost: me.go.kr\r\n\r\n"));
         rcvSize = read(cSock,buffer,BUFFER_SIZE);
         if(rcvSize <0){
             printf("Error in read()\n");
@@ -65,8 +48,6 @@ int main(int argc, char *argv[]){
         }
 
         printf("%s",buffer);
-    }
 
     close(cSock);
-    printf("TCP Client is Closed.\n");
 }

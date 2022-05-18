@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Basic</title>
+    <script>
+        // 이벤트를 연결합니다.
+        window.onload = function () {
+            // 문서 객체를 선택합니다.
+            let elements = document.getElementsByName("fname");
+
+            // 문서 객체를 조작합니다.
+            document.getElementById("demo").innerHTML = elements[0].tagName;
+            document.getElementById("demo1").innerHTML = elements[0].nodeName;
+        };
+    </script>
+</head>
+<body>
+    <h1>The Document Object</h1>
+    <h2>The document.getElementsByName Method</h2>
+    
+    <p>First Name: <input name="fname" type="text" value="Michael"></p>
+    <p>First Name: <input name="fname" type="text" value="Doug"></p>
+    
+    <p>The tag name of the first element with the name "fname" is:</p>
+    
+    <p id="demo"></p>
+    <p id="demo1"></p>
+</body>
+</html>

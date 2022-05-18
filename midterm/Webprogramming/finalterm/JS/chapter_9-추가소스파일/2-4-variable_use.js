@@ -1,0 +1,14 @@
+console.log("'순천향대학교'"); 
+console.log('"순천향대학교"'); 
+console.log("순천향" + "대학교"); 
+console.log("순천향\t대학교"); 
+console.log("순천향\u0009대학교"); 
+console.log("순천향\n대학교"); 
+console.log("순천향\\대학교"); 
+console.log("순천향\'대학\"교"); 
+console.log("순천향\r대학교");
+console.log("순천향\v대학교");
+console.log("순천향\f대학교");
+console.log("순천향\b대학교");
+console.log("\n");
+console.log("순천향\0대학교");

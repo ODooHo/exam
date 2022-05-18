@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>	
+	<head>
+		<title>Clock</title>
+		<script>
+			// 이벤트를 연결합니다.
+			window.onload = function () {
+				setInterval(displayHello, 1000);
+
+				function displayHello() {
+					document.getElementById("demo").innerHTML += "Hello";
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<h1 id="demo"></h1>
+	</body>
+</html>
