@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>LightBox</title>
+    <link rel="stylesheet" href="prettyPhoto.css">
+    <script src="http://code.jquery.com/jquery-3.1.0.js"> </script>
+    <script src="jquery.prettyPhotos.js"> </script>
+    <script>
+        // 이벤트를 연결합니다.
+        $(document).ready(function () {
+            $('a.light').lightBox();
+        });
+    </script>
+</head>
+<body>
+    <a href="images/fullscreen/2.jpg" rel="prettyPhoto" title="This is the description"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="This is the title" /></a>
+</body>
+</html>
+
+<!-- http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/ -->

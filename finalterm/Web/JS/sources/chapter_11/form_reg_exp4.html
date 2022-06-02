@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>정규식 flag y</title>
+</head>
+<body>
+<script>
+    let str = 'AAAAB';
+
+    let regexp = /A/m;
+    // alert(regexp.lastIndex); // 0 (initially lastIndex=0)
+
+    let word1 = regexp.exec(str);
+    alert(word1[0]); // let (1st word)
+    // alert(word1[1]); // let (1st word)
+    // alert(regexp.lastIndex); // 3 (position after the match)
+</script>
+
+</body>

@@ -1,0 +1,12 @@
+$color: orange;
+div {
+  @if $color == strawberry {
+    color: #FE2E2E;
+  } @else if $color == orange {
+    color: #FE9A2E;
+  } @else if $color == banana {
+    color: #FFFF00;
+  } @else {
+    color: #2A1B0A;
+  }
+}

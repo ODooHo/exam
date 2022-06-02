@@ -1,0 +1,7 @@
+.list_gnb li:first-child {
+  margin-left: 0;
+}
+
+div.section .list_gnb li {
+  margin-left: 20px;
+}

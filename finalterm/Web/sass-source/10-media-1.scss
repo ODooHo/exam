@@ -1,0 +1,6 @@
+@import '10-media-0.scss';/*변수파일 import*/ 
+* { 
+  @include mobile{ /*브라우저 사이즈767px이하일때*/ background: pink; } 
+  @include tablet{ /*브라우저 사이즈1023px이하일때*/ background: blanchedalmond; } 
+  @include desktop{ /*브라우저 사이즈1024px이상일때*/ background: gray; } 
+}

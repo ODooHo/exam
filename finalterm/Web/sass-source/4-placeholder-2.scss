@@ -1,0 +1,20 @@
+#gnb { 
+    background-color: #fff; 
+    width: 200px; 
+    ul%box-type { 
+        display: flex; 
+        color: #111; 
+    } 
+} 
+
+.list_notice { 
+    @extend %box-type; 
+} 
+
+h1, %title-type { 
+    color: #000; 
+} 
+
+h2 { 
+    @extend %title-type;
+}

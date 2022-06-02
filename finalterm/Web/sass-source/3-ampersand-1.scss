@@ -1,0 +1,10 @@
+.list_gnb { 
+    li { 
+        &:first-child { 
+            margin-left: 0; 
+        } 
+        div.section & { 
+            margin-left: 20px; 
+        } 
+    } 
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One True Layout</title>
+    <style>
+        #one-true { overflow: hidden; }
+        #one-true .col {
+            width: 27%;
+            padding: 30px 3.15% 0;  /* top, right & left(6.3%), bottom */
+            float: left;
+            margin-bottom: -99999px;
+            padding-bottom: 99999px;
+        }
+        #one-true .col:nth-child(1) { margin-left: 33.3%; background: rgb(255, 0, 0); }
+        /* #one-true .col:nth-child(2) { margin-left: 0%; background: rgb(0, 0, 255); } */
+        #one-true .col:nth-child(2) { margin-left: -66.6%; background: rgb(0, 0, 255); }
+        #one-true .col:nth-child(3) { margin-left: 0%; background: rgb(0, 255, 0); }
+        /* #one-true .col:nth-child(3) { left: 0; background: rgb(0, 255, 0); } */
+        #one-true p { margin-bottom: 30px; } /* Bottom padding on col is busy */
+    </style>
+</head>
+<body>
+    <div id="one-true" class="group">
+        <div class="col"><h3>I am listed first in source order.</h3><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
+        <div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+        <div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
+    </div>
+    <div><p></p></div>
+    <div id="one-true" class="group">
+        <div class="col"><h3>I am listed first in source order.</h3><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
+        <div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+        <div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
+    </div>
+</body>
+</html>

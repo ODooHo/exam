@@ -1,0 +1,4 @@
+$width: 555px;
+div {
+  width: if($width > 300px, $width, null);
+}

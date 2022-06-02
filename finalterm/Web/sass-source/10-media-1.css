@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*변수*/
+/*반응형 화면 크기*/
+/*반응형, 브라우저 크기가 767px 이하일때*/
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+/*변수파일 import*/
+@media (max-width: 767px) {
+  * {
+    /*브라우저 사이즈767px이하일때*/
+    background: pink;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  * {
+    /*브라우저 사이즈1023px이하일때*/
+    background: blanchedalmond;
+  }
+}
+
+@media (min-width: 1024px) {
+  * {
+    /*브라우저 사이즈1024px이상일때*/
+    background: gray;
+  }
+}

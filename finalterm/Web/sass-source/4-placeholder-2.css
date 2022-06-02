@@ -1,0 +1,15 @@
+#gnb {
+  background-color: #fff;
+  width: 200px;
+}
+
+#gnb ul.list_notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #111;
+}
+
+h1, h2 {
+  color: #000;
+}

@@ -1,0 +1,11 @@
+.box-apple {
+  background: url("/images/korea.png");
+}
+
+.box-orange {
+  background: url("/images/china.png");
+}
+
+.box-banana {
+  background: url("/images/japan.png");
+}

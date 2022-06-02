@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* 블록 주석은 
+컴파일 스타일에 따라 CSS에 따라 다르게 표현되며, 
+'neseted', 'expnaded' 컴파일되는 주석이 동일합니다. */
+.btn {
+  color: #000;
+}
+
+.btn.active {
+  color: coral;
+}

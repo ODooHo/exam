@@ -1,0 +1,11 @@
+$fruits-data: (
+  apple: korea,
+  orange: china,
+  banana: japan
+);
+
+@each $fruit, $country in $fruits-data {
+  .box-#{$fruit} {
+    background: url("/images/#{$country}.png");
+  }
+}

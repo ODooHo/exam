@@ -1,0 +1,8 @@
+.icon1::after {
+  content: "/images/icon.png";
+}
+
+.icon2::after {
+  content: "/images/icon.png";
+  position: absolute;
+}

@@ -1,0 +1,15 @@
+.btn {
+  color: #000;
+}
+
+.btn.active {
+  color: coral;
+}
+
+.list_gnb li:first-child {
+  margin-left: 0;
+}
+
+div[class^='section_'] {
+  background-color: #ccc;
+}

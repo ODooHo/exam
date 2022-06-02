@@ -1,0 +1,8 @@
+//인라인 주석은 컴파일 되지 않습니다. 
+
+.btn { 
+    color: #000; 
+    &.active { 
+        color:coral; 
+    } 
+}

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Object</title>
+    <script>
+        window.onclick = function (event) {
+            alert(event);
+            alert(event.currentTarget);
+            alert(event.detail);
+            alert(event.type);
+            alert(event.trusted);
+        };
+    </script>
+</head>
+<body>
+    <button id="button">버튼</button>
+</body>
+</html>

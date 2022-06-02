@@ -1,0 +1,11 @@
+#gnb {
+  background-color: #fff;
+  width: 200px;
+}
+
+#gnb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #111;
+}

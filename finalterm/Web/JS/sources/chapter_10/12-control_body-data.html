@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Basic</title>
+    <script>
+        window.onload = function () {
+            var art = document.getElementById('electriccars');
+
+            alert(art.dataset.columns); // "3"
+            alert(art.dataset.indexNumber); // "12345"
+            alert(art.dataset.parent); // "cars"
+        };
+    </script>
+</head>
+<body>
+  <article id="electriccars" data-columns="3" data-index-number="12345" data-parent="cars">
+  </article>
+</body>
+</html>

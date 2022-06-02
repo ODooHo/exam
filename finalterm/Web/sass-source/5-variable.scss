@@ -1,0 +1,14 @@
+$jb-font: "Times New Roman";
+$jb-size: 20px;
+$jb-color: #444444;
+h1 {
+  font-family: $jb-font;
+  font-size: $jb-size;
+  color: $jb-color;
+}
+
+p {
+  font-family: $jb-font;
+  font-size: $jb-size;
+  color: yellow;
+}

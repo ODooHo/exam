@@ -1,0 +1,6 @@
+$width: 90px;
+div {
+  @if not ($width > 100px) {
+    height: 300px;
+  }
+}

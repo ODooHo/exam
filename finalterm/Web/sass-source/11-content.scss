@@ -1,0 +1,18 @@
+// 선언된 Mixin에 @content이 포함되어 있다면 해당 부분에 원하는 스타일 블록 을 전달할 수 있습니다.
+
+@mixin icon($url) {
+    &::after {
+      content: $url;
+      @content;
+    }
+  }
+  .icon1 {
+    // icon Mixin의 기존 기능만 사용
+    @include icon("/images/icon.png");
+  }
+  .icon2 {
+    // icon Mixin에 스타일 블록을 추가하여 사용
+    @include icon("/images/icon.png") {
+      position: absolute;
+    };
+  }

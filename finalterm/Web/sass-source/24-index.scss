@@ -1,0 +1,10 @@
+$fruits: (apple, orange, banana, mango);
+
+.fruits {
+  @each $fruit in $fruits {
+    $i: index($fruits, $fruit);
+    li:nth-child(#{$i}) {
+      left: 50px * $i;
+    }
+  }
+}

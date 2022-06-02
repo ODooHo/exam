@@ -1,0 +1,50 @@
+
+div.container {
+    width : 1080px;
+    margin : 0 auto;
+    margin-bottom : 8px;
+    overflow :hidden; /* 중요 */
+    }
+div.left {
+    float : left;
+    width : 740px;
+    height : 200px;
+    margin-bottom : 8px;
+    background-color: red;
+}
+div.right {
+    float : right;
+    width : 332px;
+    height : 200px;
+    margin-bottom : 8px;
+    background-color: blue;
+}
+ul.gnb {
+    padding : 8px 0;
+    float : left;
+}
+ul.gnb > li {
+    list-style-type: none;
+    float : left;
+    padding : 8px 16px;
+    background-color : green;
+}
+/* ul.gnb > li:first-child {
+    padding-left : 0;
+} */
+ul.gnb > li:nth-child(1) {
+    padding-left: 0;
+}
+
+ul.rank {
+    float : right;
+    padding : 8px 16px;
+    list-style-type: none;
+    background-color: rgb(221, 245, 6);
+}
+.footer {
+    margin-top : 8px;
+    background-color: rgb(78, 6, 245);
+}
+
+
