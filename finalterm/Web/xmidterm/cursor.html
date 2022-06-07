@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        width: 80px;
+        height: 80px;
+        background: red;
+        color:green;
+        text-align: center;
+        font:bold;
+        line-height:80px;
+        margin: 20px 1px 0 0;
+        padding: 0 0 0 0;
+    }
+    .container_1 {
+        width: 80px;
+        height: 80px;
+        background: red;
+        text-align: center;
+        color:white;
+        font:bold;
+        line-height:80px;
+        margin: 20px 1px 0 0;
+        padding: 0 0 0 0;
+    }
+    .container#box1{
+        float:left;
+        
+    }
+    .container_1#box2{
+        float:left;
+    }
+    .container_1#box3{
+        float:left;
+    }
+    .container#box4{
+        float:left;
+    }
+    .container_1#box5{
+        float:left;
+    }
+    .container_1#box6{
+        float:left;
+    }
+    .container:hover {
+        background:green;
+        color:red;
+        transform: translate(-20px,-19px);
+        cursor: pointer;
+    }
+    .container_1:hover {
+        background:green;
+        transform: translate(20px,19px);
+        cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>문자를 클릭 해보세요!</h1>
+    <hr>
+    <div class="container"id = "box1">S</div>
+    <div class="container_1"id = "box2">C</div>
+    <div class="container_1"id = "box3">H</div>
+    <div class="container"id = "box4">I</div>
+    <div class="container_1"id = "box5">O</div>
+    <div class="container_1"id = "box6">T</div>
+  </body>
+</html>
